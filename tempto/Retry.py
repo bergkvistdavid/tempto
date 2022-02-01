@@ -4,6 +4,11 @@ from functools import partial
 
 class Retry:
     def __init__(self, max_tries=1, delay=0.0, jitter=0.0):
+        """ Instantiate new instance or Retry
+        :param max_tries: total retries
+        :param delay: post-exception delay between attempts
+        :param jitter: extra seconds added to delay post-exception between attempts
+        """
         self.max_tries = max_tries
         self.tries = 0
 
@@ -12,6 +17,13 @@ class Retry:
         self.error = None
 
     def run(self, fn, *args, **kwargs):
+        """ Invoke function until ran or exhausting retries
+
+        :param fn: function to invoke
+        :param args: positional arguments of function to invoke.
+        :param kwargs: named arguments of function to invoke.
+        :return: result of function {fn}
+        """
         args = args or list()
         kwargs = kwargs or dict()
 

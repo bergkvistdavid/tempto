@@ -38,3 +38,10 @@ class Retry:
                 if _try == self.max_tries - 1:
                     raise e
                 time.sleep(self.delay if self.jitter else self.delay + (self.tries * self.jitter))
+
+    def copy(self):
+        """ instantiate new instance with shadowed arguments
+
+        :return: new copied retry instance
+        """
+        return Retry(self.max_tries, self.delay, self.jitter)

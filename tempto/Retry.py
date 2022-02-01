@@ -83,7 +83,7 @@ class Retry:
                 self.error = e
                 if _try == self.max_tries - 1:
                     raise e
-                time.sleep(self.delay if not self.jitter else self.delay + (self.tries * self.jitter))
+                time.sleep(self.delay + (self.tries * self.jitter))
 
     def copy(self):
         """ instantiate new instance with shadowed arguments

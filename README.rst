@@ -1,6 +1,6 @@
 tempto
 =====
-Convenient retrying
+Convenient retrying for python
 
 Code
 """"""""

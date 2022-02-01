@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="tempto",
-    version="0.0.1",
+    version="0.1.0",
     license="Apache License 2.0",
     description="Retry",
     author="bergkvistdavid",

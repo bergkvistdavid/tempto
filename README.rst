@@ -1,6 +1,6 @@
 tempto
 =====
-Convenient retrying for python that supports asynchronous and synchronous systems
+Convenient retrying for Python that supports asynchronous and synchronous systems
 
 Code
 """"""""

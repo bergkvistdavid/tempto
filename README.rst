@@ -1,6 +1,6 @@
 tempto
 =====
-Convenient asynchronous ands synchronous retrying
+Convenient asynchronous & synchronous retrying
 
 Code
 """"""""

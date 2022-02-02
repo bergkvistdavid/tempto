@@ -33,7 +33,7 @@ class AsyncRetry:
         for _try in range(self.max_tries):
             try:
                 self.tries += 1
-                return partial(fn, *args, **kwargs)()
+                return await partial(fn, *args, **kwargs)()
             except Exception as e:
                 self.error = e
                 if _try == self.max_tries - 1:

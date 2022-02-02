@@ -25,5 +25,5 @@ Async
     async def raise_error(message):
         raise Exception(message)
 
-    retry = await AsyncRetry(retries=5, delay=1, jitter=1)
+    retry = AsyncRetry(retries=5, delay=1, jitter=1)
     await retry.run(raise_error, "oops! an error occurred")
